@@ -1,3 +1,4 @@
+include ':CusCircleTabayout'
 include ':lib_core_one'
 include ':app'
 rootProject.name = "TestOne"
