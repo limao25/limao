@@ -21,3 +21,5 @@ public class SeancondFragment extends Fragment {
         return view;
     }
 }
+
+
