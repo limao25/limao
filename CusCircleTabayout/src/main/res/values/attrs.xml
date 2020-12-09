@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="bottomCircle">
+    <declare-styleable name="bottomCircleView">
 <!--        未选择时的颜色-->
         <attr name="tabtextcolor" format="color"/>
 <!--         选择时的颜色-->
