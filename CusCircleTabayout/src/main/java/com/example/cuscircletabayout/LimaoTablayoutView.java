@@ -7,10 +7,12 @@ import android.graphics.RectF;
 import android.graphics.Typeface;
 import android.util.AttributeSet;
 import android.view.View;
+import android.widget.TabHost;
 
 import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 
+import com.example.cuscircletabayout.interfac.OnTabClickListener;
 import com.example.cuscircletabayout.utils.DisplayUtil;
 
 import java.util.ArrayList;
@@ -108,23 +110,28 @@ public class LimaoTablayoutView extends View {
     RectF rectF_bg1;
 
     private void initData() {
+        //更新一些属性值
         view_be_corners = DisplayUtil.dip2px(mContext,5);
         view_bg = ContextCompat.getColor(mContext,R.color.tab_select_color);
         selectcolor = ContextCompat.getColor(mContext,R.color.tab_normal_color);
         tabTextColor = ContextCompat.getColor(mContext,R.color.tab_text_color);
 
+        //默认选择文本和未选中是一个颜色值
         tabSelectTextcolor = ContextCompat.getColor(mContext,R.color.tab_text_color);
         tabTextSize = DisplayUtil.dip2px(mContext,14);
         tanTextStyle = Typeface.NORMAL;
 
+        //初始化画笔
         paint = new Paint(paint.ANTI_ALIAS_FLAG);
         paint.setStyle(Paint.Style.FILL);
 
+        //初始化文字画笔以及字体
         textpaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         textpaint.setStyle(Paint.Style.FILL);
         Typeface font = Typeface.create(Typeface.SANS_SERIF, tanTextStyle);
         textpaint.setTypeface(font);
 
+        //选项
         tabTextList = new ArrayList<>();
         tabTextList.add("tab01");
         tabTextList.add("tab02");
@@ -132,5 +139,40 @@ public class LimaoTablayoutView extends View {
         tabNumer = tabTextList.size();
 
     }
+    public OnTabClickListener onTabClickListener;
 
+    /**
+     * 这是一个方法 设置选择时的状态
+     * @param tabposition
+     */
+    public void setSelectTab(int tabposition){
+        if (tabposition < tabNumer){
+            this.tabposition = tabposition;
+            invalidate();//刷新
+            if (onTabClickListener != null){
+                onTabClickListener.tabSelectedListener(tabposition);
+            }
+        }
+    }
+
+    /**
+     * 这是一个方法 设置字体
+     */
+    public void setTabTextStyle(int tabTextStyle){
+        Typeface font = Typeface.create(Typeface.SANS_SERIF, tabTextStyle);
+
+        textpaint.setTypeface(font);
+
+        invalidate();//刷新
+    }
+
+    @Override
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+        setMeasuredDimension(widthMeasureSpec,measureHeight(heightMeasureSpec));
+    }
+
+    private int measureHeight(int measureSpec) {
+        return 0;
+    }
 }
