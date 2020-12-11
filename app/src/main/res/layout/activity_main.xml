@@ -18,4 +18,28 @@
 <!--        app:tabTextSize="15sp"-->
 <!--        app:view_bg_corners="0dp" />-->
 
+<!--    <com.eftimoff.androipathview.PathView-->
+<!--        android:layout_centerInParent="true"-->
+<!--        app:svg="@drawable/ic_st_shi_two"-->
+<!--        android:layout_width="100dp"-->
+<!--        android:layout_height="100dp">-->
+
+<!--    </com.eftimoff.androipathview.PathView>-->
+
+<!--    <ImageView-->
+<!--        android:src="@drawable/ic_st_shi_two"-->
+<!--        android:layout_centerInParent="true"-->
+<!--        android:layout_width="100dp"-->
+<!--        android:layout_height="100dp">-->
+
+<!--    </ImageView>-->
+
+    <com.jaredrummler.android.widget.AnimatedSvgView
+        android:layout_centerInParent="true"
+        app:animatedSvgGlyphStrings="@drawable/ic_st_shi_two"
+        android:layout_width="100dp"
+        android:layout_height="100dp">
+
+    </com.jaredrummler.android.widget.AnimatedSvgView>
+
 </RelativeLayout>

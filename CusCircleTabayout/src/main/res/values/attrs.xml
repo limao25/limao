@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="bottomCircleView">
-<!--        未选择时的颜色-->
-        <attr name="tabtextcolor" format="color"/>
-<!--         选择时的颜色-->
-        <attr name="tabSelectTextColor" format="color"/>
-<!--        字体的大小-->
-        <attr name="tabTextSize" format="dimension"/>
-<!--        tablayout颜色-->
-        <attr name="tab_view_color" format="color"/>
-<!--        tablayout选择时颜色-->
-        <attr name="select_tab_color" format="integer"/>
-<!--        值越大 弧度越大-->
-        <attr name="arcControlX" format="integer"/>
-<!--             圆角的大小-->
-        <attr name="view_bg_corners" format="dimension"/>
+<!--    <declare-styleable name="bottomCircleView">-->
+<!--&lt;!&ndash;        未选择时的颜色&ndash;&gt;-->
+<!--        <attr name="tabtextcolor" format="color"/>-->
+<!--&lt;!&ndash;         选择时的颜色&ndash;&gt;-->
+<!--        <attr name="tabSelectTextColor" format="color"/>-->
+<!--&lt;!&ndash;        字体的大小&ndash;&gt;-->
+<!--        <attr name="tabTextSize" format="dimension"/>-->
+<!--&lt;!&ndash;        tablayout颜色&ndash;&gt;-->
+<!--        <attr name="tab_view_color" format="color"/>-->
+<!--&lt;!&ndash;        tablayout选择时颜色&ndash;&gt;-->
+<!--        <attr name="select_tab_color" format="integer"/>-->
+<!--&lt;!&ndash;        值越大 弧度越大&ndash;&gt;-->
+<!--        <attr name="arcControlX" format="integer"/>-->
+<!--&lt;!&ndash;             圆角的大小&ndash;&gt;-->
+<!--        <attr name="view_bg_corners" format="dimension"/>-->
 
-    </declare-styleable>
+<!--    </declare-styleable>-->
 </resources>

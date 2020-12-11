@@ -3,6 +3,7 @@ package com.example.testone;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.ypk.library.interfac.OnTabClickListener;
@@ -14,13 +15,16 @@ public class MainActivity extends AppCompatActivity {
 
     private ArrayList<String> tabtextlist = new ArrayList<>();
     private YPKTabLayoutView mYPKTabLayoutView;
+    private ImageView imgOne;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        mYPKTabLayoutView = (YPKTabLayoutView) findViewById(R.id.mYPKTabLayoutView);
+
+//        mYPKTabLabbyoutView = (YPKTabLayoutView) findViewById(R.id.mYPKTabLayoutView);
 //
 //        tabtextlist.add("推荐学习");
 //        tabtextlist.add("企业学院");
