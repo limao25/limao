@@ -34,12 +34,12 @@
 
 <!--    </ImageView>-->
 
-    <com.jaredrummler.android.widget.AnimatedSvgView
-        android:layout_centerInParent="true"
-        app:animatedSvgGlyphStrings="@drawable/ic_st_shi_two"
-        android:layout_width="100dp"
-        android:layout_height="100dp">
+     <androidx.viewpager.widget.ViewPager
+         android:id="@+id/vp_one"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent">
 
-    </com.jaredrummler.android.widget.AnimatedSvgView>
+
+     </androidx.viewpager.widget.ViewPager>
 
 </RelativeLayout>
