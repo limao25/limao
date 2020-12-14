@@ -16,13 +16,13 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MyHttpManger  {
 
-    private static volatile MyHttpManger myHttpManger;
+    public static volatile MyHttpManger myHttpManger;
 
     public MyHttpManger() {
 
     }
 
-    private static synchronized MyHttpManger getInstance(){
+    public static synchronized MyHttpManger getInstance(){
         if (myHttpManger == null){
             myHttpManger = new MyHttpManger();
         }
