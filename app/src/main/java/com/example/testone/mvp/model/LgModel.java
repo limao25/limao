@@ -1,5 +1,6 @@
 package com.example.testone.mvp.model;
 
+import com.example.lib_core_one.entity.MLoginEntity;
 import com.example.lib_core_one.entity.MyEntity;
 import com.example.lib_core_one.mvp.model.BaseModel;
 import com.example.lib_core_one.network.MyHttpManger;
@@ -13,7 +14,7 @@ import io.reactivex.schedulers.Schedulers;
 
 public class LgModel extends BaseModel implements LoginContract.GetLoginModel {
     @Override
-    public void GetLogin(MyLoginEntity myLoginEntity, Observer<MyEntity<MyLoginEntity>> observer) {
+    public void GetLogin(MyLoginEntity myLoginEntity, Observer<MLoginEntity<MyLoginEntity>> observer) {
         MyHttpManger
                 .getInstance()
                 .NoTokenRetrofit()

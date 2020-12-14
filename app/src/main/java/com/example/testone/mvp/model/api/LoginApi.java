@@ -1,5 +1,6 @@
 package com.example.testone.mvp.model.api;
 
+import com.example.lib_core_one.entity.MLoginEntity;
 import com.example.lib_core_one.entity.MyEntity;
 import com.example.testone.mvp.model.Entity.MyLoginEntity;
 
@@ -11,6 +12,6 @@ public interface LoginApi {
 ///gisim/user/login
 
     @POST("gisim/user/login")
-    Observable<MyEntity<MyLoginEntity>> GetLogin(@Body MyLoginEntity myLoginEntity);
+    Observable<MLoginEntity<MyLoginEntity>> GetLogin(@Body MyLoginEntity myLoginEntity);
 
 }

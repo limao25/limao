@@ -3,6 +3,7 @@ package com.example.testone.activity;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -23,6 +24,7 @@ public class LoginActivity extends BaseActivity<LgPresenter> implements LoginCon
     private EditText etPassword;
     private TextView tvRegist;
     private Button btnLogin;
+    private SharedPreferences sharedPreferences;
     
     @Override
     public int BandLayout() {
@@ -80,7 +82,7 @@ public class LoginActivity extends BaseActivity<LgPresenter> implements LoginCon
     }
 
     @Override
-    public void initToast(String Msg) {
+    public void initToast(String Msg,String token,int code) {
 
         Toast.makeText(this, ""+ Msg, Toast.LENGTH_SHORT).show();
 
@@ -89,5 +91,14 @@ public class LoginActivity extends BaseActivity<LgPresenter> implements LoginCon
 //        }else {
 //            Toast.makeText(this, "shibai", Toast.LENGTH_SHORT).show();
 //        }
+        if (code == 0){
+             sharedPreferences = getSharedPreferences("user.db", MODE_PRIVATE);
+
+            SharedPreferences.Editor edit = sharedPreferences.edit();
+
+            edit.putString("token",token);
+
+            edit.commit();
+        }
     }
 }
